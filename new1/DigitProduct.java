@@ -1,0 +1,19 @@
+import java.util.Scanner;
+class DigitProduct 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+
+		int number = 1234;
+		int product = 1;
+
+		while(number>0)
+		{
+			int digit = number%10;
+			product*=(digit!=0)?digit:1;
+			number/=10;
+		}
+		System.out.println("Product of digits: " +product);
+	}
+}
