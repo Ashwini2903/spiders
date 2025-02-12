@@ -1,0 +1,39 @@
+import java.util.Scanner;
+class PhoneLock 
+{
+	public static void main(String[] args) throws InterruptedException
+	{
+		Scanner sc = new Scanner(System.in);
+		int storedPin=143;
+		int Seconds=5000;
+
+		outerLoop:
+			for(;;)
+		{
+			int attempts = 3;
+			do
+			{
+				System.out.println("Enter the pin");
+				int pin = sc.nextInt();
+				if(storedPin==pin)
+				{
+					System.out.println("PHONE UNLOCK");
+					break outerLoop;
+				}
+				else
+				{
+					System.out.println("WRONG PIN");
+					System.out.println("ATTEMPTS LEFT" +(attempts-1));
+
+				}
+				attempts--;
+			}while (attempts>=1);
+			
+		}
+		System.out.println();
+		System.out.println("PHONE IS DISABLED FOR" +(Seconds/1000)+"Seconds");
+		Thread.sleep(Seconds);
+		Seconds*=2;
+		System.out.println();
+	}
+}
