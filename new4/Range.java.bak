@@ -1,0 +1,12 @@
+import java.util.Scanner;
+class Range
+{
+	public static void main(String[] args) 
+	{
+        char ch = 'A';
+		Scanner sc = new Scanner(System.in);
+		System.out.println((ch>=65 && ch<=90)?("is uppercase"):("not a uppercase"));
+		char ch = sc.next().charAt(0);
+
+	}
+}

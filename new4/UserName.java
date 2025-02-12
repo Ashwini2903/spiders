@@ -1,0 +1,17 @@
+import java.util.Scanner;
+class UserName 
+{
+	public static void main(String[] args) 
+	{
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter your name");
+		String un = sc.next().toUpperCase();
+		int len = un.length();
+		for(int i = 0; i<len; i++)
+		{
+			System.out.println(un.charAt(1));
+		}
+		Thread.sleep(2000);
+	}
+}
